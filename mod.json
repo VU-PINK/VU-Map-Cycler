@@ -1,0 +1,11 @@
+{
+    "Name": "Map Cycler",
+    "Description": "Skips the current map if server has been empty for an amount of time",
+    "Authors": ["P!NK_Lesley aka PowerChopper"],
+    "Version": "1.0.0",
+    "HasVeniceEXT": true,
+    "HasWebUI": false,
+    "Dependencies": {
+        "veniceext": "^1.0.0"
+    }
+}
