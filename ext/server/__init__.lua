@@ -89,7 +89,12 @@ Events:Subscribe('Engine:Update', function(deltaTime, simulationDeltaTime)
     if MapCyclingEnabled and timerActive then
         noPlayersTime = noPlayersTime + deltaTime
         if noPlayersTime >= SkipTime then
-            setRandomNextMap()
+            if MapCycleRandom then
+                setRandomNextMap()
+            else
+                RCON:SendCommand('mapList.runNextRound')
+            end
+            
             print('No players are on the server! Skipping map...')
             timerActive = false
             noPlayersTime = 0
