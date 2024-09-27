@@ -96,7 +96,6 @@ Events:Subscribe('Engine:Update', function(deltaTime, simulationDeltaTime)
             end
             
             print('No players are on the server! Skipping map...')
-            timerActive = false
             noPlayersTime = 0
         end
     end
